@@ -1,1 +1,1 @@
-# Python_for_everybody_specilization
+# Python for everybody specialization provided from Michigan University - Charles R. Severance
