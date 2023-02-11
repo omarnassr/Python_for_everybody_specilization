@@ -7,10 +7,17 @@ Count these lines and extract the floating point values from each of the lines a
 # Use the file name mbox-short.txt as the file name
 
 
+# Use the file name mbox-short.txt as the file name
 fname = input("Enter file name: ")
 fh = open(fname)
+count = 0
+fltno = 0
 for line in fh:
     if not line.startswith("X-DSPAM-Confidence:"):
         continue
-    print(line)
-print("Done")
+    else:
+        count += 1
+        no = line.find('0')
+        fltno += float(line[no:]) 
+
+print('Average spam confidence:', fltno/count )
